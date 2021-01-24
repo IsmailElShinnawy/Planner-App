@@ -1,0 +1,19 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main class="register">
+            <%- include('./partials/banner.ejs') %>
+            <section class="register content">
+                <form method="POST" action="/users/register" class="register-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" required>
+                    <button id="register">Register</button>
+                </form>
+            </section>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

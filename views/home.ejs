@@ -1,0 +1,21 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header') %>
+        <%- include('./partials/nav') %>
+        <main class="home content">
+            <% if(lists.length > 0) {%>
+                <% lists.forEach(list => { %>
+                    <div class="list">
+                        <h2><a href="lists/<%= list._id %>"><%= list.title %></a></h2>
+                        <h3><%= list.description %></h3>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>You don't have any lists yet, start by 
+                    <a href="/lists/create">adding one</a></p>    
+            <% } %>
+        </main>
+        <%- include('./partials/footer') %>
+    </body>
+</html>

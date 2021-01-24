@@ -1,0 +1,6 @@
+<form action="/lists/edit/additem/<%= list._id %>?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="newitem">New Item:</label>
+    <input id="newitem" type="text" name="newitem">
+    <button id="add">Add</button>
+</form>

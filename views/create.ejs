@@ -1,0 +1,16 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header') %>
+        <%- include('./partials/nav') %>
+        <main class="create content">
+            <form action="/lists/create" method="POST" class="create-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="shortdescription">Short Description:</label>
+                <textarea id="shortdescription" name="shortdescription" required></textarea>
+                <button id="create">Create</button>
+            </form>
+        </main>
+    </body>
+</html>

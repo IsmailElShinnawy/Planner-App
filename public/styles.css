@@ -1,0 +1,225 @@
+body, h1, h2, a, li, footer, p{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: arial, sans-serif;
+}
+header{
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+header h1{
+    font-size: 60px;
+    text-align: center;
+}
+header h2{
+    text-align: right;
+    font-size: 20px;
+}
+header div{
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+}
+main.login,
+main.register{
+    position: relative;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    max-width: 100%;
+}
+.banner h2{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 48px;
+    left: 0;
+    top: 25%;
+}
+.login.content,
+.register.content{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.login.content form input,
+.register.content form input,
+.login.content form label,
+.register.content form label{
+    display: block;
+    margin-bottom: 10px;
+}
+.login.content form input,
+.register.content form input{
+    background-color: #dfdbdb;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 28px;
+    border: 2px solid #000000;
+    outline: none;
+    font-size: 20px;
+}
+nav.main-nav{
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px;
+    width: 800px;
+    margin: 0 auto;
+}
+nav.main-nav li{
+    display: inline-block;
+    width: 33%;
+    font-size: 20px;
+}
+nav.main-nav li a{
+    color: #000000;
+}
+main.home.content{
+    width: 800px;
+    margin: 10px auto;
+}
+main.home.content div.list{
+    border-left: 10px solid #012f6a;
+    padding-left: 10px;
+}
+main.home.content div.list h2 a{
+    text-transform: capitalize;
+    color: #555252;
+}
+main.home.content div.list h3{
+    text-transform: lowercase;
+    color: #353333;
+}
+main.create.content{
+    width: 400px;
+    height: 500px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 4px solid #000000;
+    border-radius: 20px;
+}
+main.create.content form.create-form label,
+main.create.content form.create-form input,
+main.create.content form.create-form textarea{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+main.create.content form.create-form textarea,
+main.create.content form.create-form input{
+    border-radius: 10px;
+    border: 2px solid #000000;
+    outline: none;
+}
+main.create.content form.create-form textarea{
+    width: 100%;
+    height: 100px;
+    margin: 5px auto;
+    resize: none;
+}
+main.details.content{
+    position: relative;
+    width: 800px;
+    margin: 10px auto;
+}
+main.details.content div.list-info{
+    border-bottom: 4px solid #012f6a;
+}
+main.details.content h1,
+main.details.content h2{
+    margin-bottom: 10px;
+}
+main.details.content h1{
+    text-transform: uppercase;
+}
+main.details.content ol li{
+    font-size: 25px;
+    border-left: 5px solid #2c78dd;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+main.details.content div.list-item{
+    position: relative;
+}
+#deleteitem > img{
+    position: absolute;
+    left: -25px;
+    top: 5px;
+}
+main.details.content #deletelist{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+main.details.content form label,
+main.details.content form input{
+    font-size: 20px;
+}
+main.details.content form input{
+    border: 5px solid #000000;
+    border-radius: 10px;
+}
+form button,
+main.details.content #deletelist{
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    color: #000000;
+    padding: 2px;
+}
+footer{
+    text-align:center;
+    background-color: #dfdbdb;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.login.content form input:focus,
+.register.content form input:focus{
+    border: 2px dashed #000000;
+    caret-color: #0000FF;
+}
+nav.main-nav li a:hover{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #dfdbdb;
+    color: #012f6a;
+}
+main.home.content div.list:hover{
+    position: relative;
+    top: -3px;
+}
+main.home.content div.list h2 a:hover{
+    color: #012f6a;
+}
+button:hover,
+main.details.content #deletelist:hover{
+    cursor: pointer;
+    background-color: #012f6a;
+    color: #FFFFFF;
+}
+main.details.content ol li:hover{
+    border-color: 012f6a;
+    position: relative;
+    top: -3px;
+}
+#deleteitem > img:hover{
+    cursor: pointer;
+    border-radius: 100px;
+}

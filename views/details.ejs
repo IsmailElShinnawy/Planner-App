@@ -1,0 +1,57 @@
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/header') %>
+        <%- include('./partials/nav') %>
+        <main class="details content">
+            <a id="deletelist" data-listid="<%= list._id %>">Delete list</a>
+            <div class="list-info">
+                <h1><%= list.title %></h1>
+                <h2><%= list.description %></h2>
+            </div>
+            <% if(list.items.length > 0) { %>
+                <ol>
+                    <% list.items.forEach( (item, idx) => { %>
+                    <div class=list-item>
+                        <li><%= item %></li>
+                        <a id="deleteitem" data-listid= "<%= list._id %>" data-idx="<%= idx %>">
+                            <img src="/trashcan.svg" alt="delete icon">
+                        </a>
+                    </div>
+                    <% }) %>
+                </ol>
+            <% } else { %>
+                <h3>This list doesn't contain any items yet</h3>
+            <% } %>
+            <%- include('./partials/additem') %>
+        </main>
+
+        <%- include('./partials/footer') %>
+        <script>
+            const itemstrashcans = document.querySelectorAll('a#deleteitem');
+            itemstrashcans.forEach((trashcan)=>{
+                trashcan.addEventListener('click', (e)=>{
+                    const endpoint = `/lists/edit/deleteitem/${trashcan.dataset.listid}/${trashcan.dataset.idx}`;
+                    fetch(endpoint, {
+                        method: 'DELETE'
+                    })
+                        .then(response => response.json())
+                        .then(data => window.location.href = data.redirect)
+                        .catch(err => console.log(err));
+                });
+            });
+
+            const listtrashcan = document.querySelector('a#deletelist');
+            listtrashcan.addEventListener('click', (e)=>{
+                const endpoint = `/lists/delete/${listtrashcan.dataset.listid}`;
+                fetch(endpoint, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => window.location.href = data.redirect)
+                    .catch(err => console.log(err));
+            })
+        </script>
+
+    </body>
+</html>
